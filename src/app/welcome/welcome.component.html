@@ -41,6 +41,7 @@
   </p>
 </section>
 
+<!-- Load the component when the use scrolls down to it. -->
 <!--@defer (on viewport){-->
 
 <!--  <app-offer-preview />-->
@@ -51,6 +52,9 @@
 
 <!--}-->
 
+<!--Load the component when user clicks on the fallback content. -->
+<!-- Prefetch to improve speed with which data is served.
+When we hover on the fallback the component code will be loaded but on interaction will fallback will the component be visible -->
 @defer (on interaction ; prefetch on hover){
 
   <app-offer-preview />
